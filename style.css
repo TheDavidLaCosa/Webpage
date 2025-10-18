@@ -337,18 +337,30 @@ html {
 
 /* Botó de tancar (X) */
 .close-zoom {
-    position: absolute;
+    position: fixed; /* 👈 fixa: no es mou amb el zoom */
     top: 30px;
     right: 40px;
+    width: 50px;            /* 👈 mides iguals per rodona perfecta */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    font-size: 40px;
+    font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s;
+    background-color: rgba(0, 0, 0, 0.55); /* 👈 fons contrastat visible sobre blanc o negre */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* 👈 marc clar */
+    border-radius: 50%; /* 👈 ara és realment una rodona */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    z-index: 1200; /* 👈 per sobre del zoom i de la imatge */
+    transition: all 0.2s ease;
 }
 
 .close-zoom:hover {
+    background-color: rgba(0, 0, 0, 0.8);
     color: #66aaff;
+    transform: scale(1.1);
 }
 
 /* --- Controls de zoom --- */
@@ -358,28 +370,44 @@ html {
     right: 50px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    z-index: 1100;
+    gap: 12px;
+    z-index: 1200;
 }
 
-.zoom-controls button {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: none;
-    color: #333;
-    font-size: 22px;
-    font-weight: bold;
-    width: 45px;
-    height: 45px;
+.zoom-controls button,
+.close-zoom {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
     cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    background-color: rgba(0, 0, 0, 0.55); /* 👈 fons fosc translúcid visible sobre blanc */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* 👈 marc clar per contrast */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    transition: all 0.25s ease;
 }
 
-.zoom-controls button:hover {
-    background-color: #007bff;
-    color: white;
+.zoom-controls button:hover,
+.close-zoom:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #66aaff;
     transform: scale(1.1);
+}
+
+/* Botó de tancar (❌) fixat a dalt a la dreta */
+.close-zoom {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    font-size: 28px;
+    z-index: 1300; /* per sobre de tot */
 }
 
 /* El modal ha de poder fer scroll vertical/horitzontal */
