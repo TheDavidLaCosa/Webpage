@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="page-header">
+    </header>
 
     <main class="container">
         <div class="header">
@@ -14,26 +16,49 @@
         </div>
 
         <!-- 📝 Text introductori -->
-        <div class="intro-text">
+        <div class="text-section">
             <p>
-                Hi, thanks for coming in! I'm <strong>David Larrosa</strong> :)<br><br>
-                This webpage contains the paper and poster that I presented at the 
-                <strong>Catalan Congress of Artificial Intelligence (CCIA 27)</strong>.<br><br>
-                The buttons below will show you my short article, the extended version (with more insights and conclusions), 
-                and the <em>CCIA journal</em> where all the congress articles are.<br><br>
-                Hope you like them!
+                Hi, thanks for coming in! I'm <strong>David Larrosa</strong> 😁
             </p>
+
+            <p>
+                This webpage contains the paper and poster that I presented at the 
+                <strong>Catalan Congress of Artificial Intelligence (CCIA 27)</strong>.
+                The article is called <em>“Hate Speech and Emojis: The journalist case”</em> but to make it short we’ve also been calling it <strong>Disargue</strong>.
+            </p>
+
+            <p>Below you can read the following documents:</p>
+            <ul class="intro-list">
+                <li><strong>“Article Hate Speech and Emojis: The journalist case” (short version):</strong> This document is four pages long.</li>
+                <li><strong>“Article Hate Speech and Emojis: The journalist case” (longer version):</strong> This document contains more insight into the original article.</li>
+                <li><strong>CCIA Journal:</strong> This link brings you to the CCIA journal that contains all the other projects presented.</li>
+            </ul>
+
+            <p>
+                This article is part of my final master thesis at the 
+                <strong>Official University Master of Data Science (MUDS)</strong> at 
+                <strong>La Salle – Universitat Ramon Llull</strong>. 
+                If you want to read it you can click the fourth link.
+            </p>
+
+            <p><em>Hope you like them all!</em></p>
         </div>
+
+
+        <!-- 🧩 Secció d'articles -->
+        <h2 class="poster-title">Articles</h2>
 
         <div class="button-group">
             <a href="html/pdf_fragment_paper_disargue.html" class="button">Short paper version</a>
             <a href="html/pdf_informe_extended.html" class="button">Extended paper version</a>
             <a href="https://ebooks.iospress.nl/volume/artificial-intelligence-research-and-development-proceedings-of-the-27th-international-conference-of-the-catalan-association-for-artificial-intelligence" 
-               target="_blank" 
-               class="button">
-               Journal of all the projects
+            target="_blank" 
+            class="button">
+            Journal of all the projects
             </a>
+            <a href="#final-thesis" class="button">Final project thesis</a>
         </div>
+
 
         <!-- 🔹 Separador -->
         <hr class="section-separator">
@@ -41,13 +66,48 @@
         <!-- 🖼️ Secció del pòster -->
         <div class="poster-container">
             <h3 class="poster-title">Project poster</h3>
-            <img src="images/poster.png" alt="Poster del projecte Disargue">
+            <img src="images/poster.png" alt="Poster del projecte Disargue" id="posterImage">
         </div>
+
+        <!-- 🔍 Modal de zoom -->
+        <div id="zoomModal" class="zoom-modal">
+            <span class="close-zoom">&times;</span>
+            <img class="zoom-modal-content" id="zoomedImage">
+        </div>
+
     </main>
 
+    <!-- 🔹 Separador -->
+    <hr id="final-thesis" class="section-separator">
+
+    <!-- 📘 Secció Final Master Thesis -->
+    <section class="thesis-section">
+        <h3 id="final-thesis" class="poster-title">Final Master Thesis</h3>
+        <h4 class="thesis-subtitle">Abstract</h4>
+
+        <p class="thesis-text text-section">
+            The use of social networks has become a common activity for most people. Although they offer many advantages, they also have the downside of enabling certain toxic behaviours that can be harmful to some individuals. Moderation of these behaviours has been the current solution applied on social networks. However, it has not been a particularly successful method because the current moderation process is partially manual, slow, and unable to keep up with the pace of content creation. All this has created the need to develop automatic methods for hate detection.  
+            <br><br>
+            This project has two main objectives: first, to analyze toxic behaviours to understand what they are and what characterizes them. The second goal is to develop a tool capable of detecting them automatically.  
+            <br><br>
+            This document shows how the study began with an analysis of what hate is and the state of the art in its detection. Then, it continues with a data analysis section, beginning with an introduction to what Natural Language Processing (NLP) is and its basic concepts, followed by an analysis of the data that will be used throughout the project. Next comes the more technical part, where Machine Learning (ML), Deep Learning (DL), and finally Large Language Models (LLM) methods are applied.  
+            <br><br>
+            In the ML section, models such as Support Vector Machine (SVM), Random Forest, and XGBoost are used to classify the data. Then, in the DL section, various neural network architectures are presented, such as Multi-Layer Perceptrons (MLP), Recurrent Neural Networks (RNN), combinations of MLP with fine-tuned BERT models, combinations of MLP with RNN, and finally, MLP with RNN with fine-tuned BERT models. In the LLM section, both hate detection specific models and general-purpose models are used to classify the data and compare their outputs with the original labels.  
+            <br><br>
+            The result of this project is a model capable of classifying text based on whether it contains hate or not, and an analysis of the different components of hate in the context of the 2024 European elections.  
+            <br><br>
+            This project is called <strong>Disargue</strong> and was carried out in collaboration with <strong>Blanquerna University</strong>.
+        </p>
+
+        <!-- 🔘 Botó nou sota de l’abstract -->
+        <div class="button-group">
+            <a href="html/pdf_informe.html" class="button">Final Master Thesis Document</a>
+        </div>
+    </section>
+
+
     <!-- 🧾 Peu de pàgina -->
-    <!-- 🧾 Peu de pàgina -->
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <p>
             Linkedin contact:
             <a href="https://www.linkedin.com/in/david-larrosa/" target="_blank">David Larrosa</a>

@@ -55,30 +55,15 @@ body {
     transition: background-color 0.3s ease;
     width: 80%; /* Els botons ocupen el 80% del contenidor */
     max-width: 400px;
+    justify-content: center;  /* 👈 centra el text horitzontalment */
+    align-items: center;       /* 👈 assegura que el text quedi centrat verticalment */
+    text-align: center;        /* 👈 reforça el centrat */
 }
 
 .button:hover {
     background-color: #0056b3; /* Color més fosc en passar el ratolí */
 }
 
-/* --- Estil del pòster --- */
-.poster-container {
-    margin-top: 50px;
-    text-align: center;
-    animation: fadeIn 1.2s ease-in-out;
-}
-
-.poster-container img {
-    width: 90%;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.poster-container img:hover {
-    transform: scale(1.02);
-}
 
 @keyframes fadeIn {
     from {
@@ -91,42 +76,6 @@ body {
     }
 }
 
-/* --- Separador entre seccions --- */
-.section-separator {
-    margin: 50px auto;
-    width: 60%;
-    border: none;
-    border-top: 2px solid #ccc;
-    opacity: 0.5;
-}
-
-/* --- Secció del pòster --- */
-.poster-container {
-    margin-top: 50px; /* Mateix espai que el separador */
-    text-align: center;
-    animation: fadeIn 1.2s ease-in-out;
-}
-
-.poster-title {
-    margin: 50px 0; /* Espai igual a dalt i a baix */
-    font-size: 1.5em;
-    color: #222;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.poster-container img {
-    width: 90%;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.poster-container img:hover {
-    transform: scale(1.02);
-}
 
 /* --- Peu de pàgina --- */
 .footer {
@@ -158,3 +107,246 @@ body {
     text-decoration: underline;
 }
 
+/* --- Estil de text general per a seccions (intro, thesis, etc.) --- */
+.text-section {
+    margin: 20px auto 40px auto;
+    max-width: 800px;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.text-section strong {
+    color: #003772;
+}
+
+/* --- Llistes dins de seccions de text --- */
+.text-section ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.text-section li {
+    margin-bottom: 10px;
+}
+
+/* --- Títol de la secció d’articles --- */
+.articles-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #222;
+    margin-top: 75px; /* 1.5 vegades l'espai actual (~50px * 1.5) */
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Suavitzar el scroll del botó que baixa --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Secció Final Master Thesis --- */
+.thesis-section {
+    text-align: left;
+    margin-top: 0; /* 👈 treiem marge extra superior (espai ja el dona el separador) */
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.thesis-title {
+    margin: 50px auto 20px auto;
+    font-size: 1.5em;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.thesis-subtitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+.thesis-text {
+    margin: 0 auto 40px auto;
+    max-width: 800px;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.thesis-section .button-group {
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+}
+
+/* --- Peu de pàgina --- */
+.footer {
+    background-color: #333; /* gris fosc */
+    color: #f4f4f4; /* text clar */
+    width: 100%;
+    text-align: left;
+    padding: 20px 10%;
+    margin-top: 37.5px; /* 3/4 de 50px */
+    box-sizing: border-box;
+}
+
+.footer a {
+    color: #66aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Separador entre seccions --- */
+.section-separator {
+    width: 60%;
+    border: none;
+    border-top: 2px solid #ccc;
+    opacity: 0.5;
+    margin: 35px auto 25px auto; /* 👈 menys espai, més compacte */
+}
+
+/* --- Secció del pòster --- */
+.poster-container {
+    margin-top: 45px; /* 👈 50% més que abans (abans era 30px) */
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.poster-container img {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.poster-container img:hover {
+    transform: scale(1.02);
+}
+
+/* --- Títols (Articles, Project Poster, Final Master Thesis) --- */
+.poster-title {
+    margin: 52.5px 0 30px 0; /* 👈 +50% respecte al marge anterior */
+    font-size: 1.5em;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* --- Secció Final Master Thesis --- */
+.thesis-section {
+    text-align: left;
+    margin-top: 0; /* 👈 l’espai ja el dóna el separador */
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.thesis-subtitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 25px;
+    font-style: italic;
+    text-align: center;
+}
+
+.thesis-section .button-group {
+    margin-top: 25px;
+}
+
+
+
+.thesis-subtitle {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Botó sota del resum de la tesi */
+.thesis-section .button-group {
+    margin-top: 30px;
+}
+
+/* --- Capçalera superior --- */
+.page-header {
+    background-color: #333; /* mateix color que el footer */
+    color: #f4f4f4;         /* text clar */
+    width: 100%;
+    text-align: left;
+    padding: 15px 10%;      /* 👈 20px d’alçada efectiva */
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.page-header p {
+    margin: 0; /* elimina marge per centrar verticalment */
+}
+
+/* --- Zoom Modal --- */
+.zoom-modal {
+    display: none; /* Ocult per defecte */
+    position: fixed;
+    z-index: 1000; /* Per sobre de tot */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85); /* Fons fosc translúcid */
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom-modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botó de tancar (X) */
+.close-zoom {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-zoom:hover {
+    color: #66aaff;
+}
