@@ -4,10 +4,11 @@ body {
     padding: 0;
     background-color: #f4f4f4; /* Fons suau */
     min-height: 100vh; /* Ocupa tota l'alçada de la finestra */
-    display: flex; /* Per centrar el contingut */
-    justify-content: center; /* Centrat horitzontalment */
-    align-items: flex-start; /* Comença a dalt */
+    display: flex;
+    flex-direction: column; /* 👈 afegeix això */
+    align-items: center; /* Centra horitzontalment */
 }
+
 
 .container {
     width: 90%;
@@ -59,3 +60,101 @@ body {
 .button:hover {
     background-color: #0056b3; /* Color més fosc en passar el ratolí */
 }
+
+/* --- Estil del pòster --- */
+.poster-container {
+    margin-top: 50px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.poster-container img {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.poster-container img:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Separador entre seccions --- */
+.section-separator {
+    margin: 50px auto;
+    width: 60%;
+    border: none;
+    border-top: 2px solid #ccc;
+    opacity: 0.5;
+}
+
+/* --- Secció del pòster --- */
+.poster-container {
+    margin-top: 50px; /* Mateix espai que el separador */
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.poster-title {
+    margin: 50px 0; /* Espai igual a dalt i a baix */
+    font-size: 1.5em;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.poster-container img {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.poster-container img:hover {
+    transform: scale(1.02);
+}
+
+/* --- Peu de pàgina --- */
+.footer {
+    text-align: center;
+    margin-top: 50px; /* mateix espai que el separador */
+    padding-bottom: 40px;
+    color: #333;
+    font-size: 1em;
+}
+
+/* --- Peu de pàgina --- */
+.footer {
+    background-color: #333; /* gris fosc */
+    color: #f4f4f4; /* text clar */
+    width: 100%;
+    text-align: left; /* alineat a l’esquerra */
+    padding: 20px 10%; /* espai intern */
+    margin-top: 37.5px; /* 3/4 de 50px */
+    box-sizing: border-box;
+}
+
+.footer a {
+    color: #66aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
