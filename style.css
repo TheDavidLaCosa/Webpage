@@ -286,14 +286,38 @@ html {
 
 /* --- Capçalera superior --- */
 .page-header {
-    background-color: #333; /* mateix color que el footer */
-    color: #f4f4f4;         /* text clar */
+    background-color: #333;  /* mateix color que el footer */
+    color: #f4f4f4;
     width: 100%;
-    text-align: left;
-    padding: 15px 10%;      /* 👈 20px d’alçada efectiva */
+    height: 70px;            /* alçada fixa per a la franja */
+    display: flex;
+    justify-content: left;   /* alineat a l’esquerra */
+    align-items: left;     /* centra verticalment */
     box-sizing: border-box;
-    font-size: 1em;
+    padding: 10px 0 25px 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
+
+/* --- Logo dins del header --- */
+.header-logo {
+    width: 40px;             /* 👈 mida reduïda */
+    height: 40px;
+    object-fit: contain;
+
+    border-radius: 30%;      /* cercle perfecte */
+    border: 2px solid white; /* línia blanca simple */
+    background-color: white; /* fons blanc dins del cercle */
+    padding: 2px;            /* separació interior */
+    
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.1);
+}
+
+
 
 .page-header p {
     margin: 0; /* elimina marge per centrar verticalment */
