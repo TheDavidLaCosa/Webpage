@@ -114,7 +114,8 @@ body {
     font-size: 1.1em;
     color: #333;
     line-height: 1.6;
-    text-align: left;
+    text-align: justify; /* 👈 Justifica el text */
+    text-justify: inter-word; /* 👈 Millora l’espaiat entre paraules */
 }
 
 .text-section strong {
@@ -126,6 +127,8 @@ body {
     list-style-type: disc;
     margin-left: 40px;
     margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .text-section li {
@@ -180,7 +183,8 @@ html {
     font-size: 1.1em;
     color: #333;
     line-height: 1.6;
-    text-align: left;
+    text-align: justify; /* ✅ ara sí justificat */
+    text-justify: inter-word; /* ✅ distribució més elegant */
 }
 
 .thesis-section .button-group {
