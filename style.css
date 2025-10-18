@@ -46,7 +46,7 @@ body {
 .button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #007bff; /* Color blau de botó */
+    background-color: #5f9fc4; /* Color blau de botó */
     color: white;
     text-decoration: none; /* Treu el subratllat */
     border-radius: 8px;
@@ -61,7 +61,7 @@ body {
 }
 
 .button:hover {
-    background-color: #0056b3; /* Color més fosc en passar el ratolí */
+    background-color: #36617a; /* Color més fosc en passar el ratolí */
 }
 
 
